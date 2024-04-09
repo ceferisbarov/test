@@ -1,0 +1,3 @@
+API_KEY =  "09837de54294dd255c02"
+USER_ID =   "3624"
+TEAM_ID =   "1401"

@@ -9,14 +9,14 @@ from tic import *
 x_api_key = keys.API_KEY    # Your API-KEY
 user_id = keys.USER_ID      # Your ID
 teamid = keys.TEAM_ID       # Your Team ID
-teamid2 = ""              # Opponent Team ID
-gameid = ""               # Current game
+teamid2 = "1422"              # Opponent Team ID
+gameid = "4962"               # Current game
 
 ###------- Start Game -------###
 
-GTTT = game.Game(n=3, target=3, DEBUG_STATE=None, DEBUG_PRINT=False)                              # IMPORTANT: Initialize n and target m correctly
-GTTT.play_game(game_type="PvAI", agents=[[heuristics_alpha_beta_pruning]], first_player="O")      # Local play
-# GTTT.play_game_API(agent=heuristics_alpha_beta_pruning, gameid=gameid)                            # Play via API
+GTTT = game.Game(n=10, target=5, DEBUG_STATE=None, DEBUG_PRINT=False)                              # IMPORTANT: Initialize n and target m correctly
+# GTTT.play_game(game_type="PvAI", agents=[[heuristics_alpha_beta_pruning]], first_player="O")      # Local play
+GTTT.play_game_API(agent=heuristics_alpha_beta_pruning, gameid=gameid)                            # Play via API
 
 ################## For Running One Time API Calls ##################
 

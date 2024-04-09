@@ -905,9 +905,15 @@ class Game:
             print("Current turn:", state.turn)
 
             # It's an AI's turn
+            get_board_string(x_api_key=x_api_key, user_id=user_id, game_id=gameid)
             move = curr_agent(self, state)
             print(f"AI ({state.turn}) chooses move: {move[0]}, {move[1]}")
+            askchoice=input("y/n?\n")
+            if askchoice=='y':
+                input_num = input("Enter:")
+                move[0], move[1] =map(int, input_num.split(','))
 
+            print(move)
             if move in state.available_actions:
                 # Process move
                 make_move(x_api_key, user_id, gameid, teamid, where_to_move=move)
